@@ -1,6 +1,6 @@
-def integracion(f: Double => Double, superior: Double, inferior: Double): Double =
+def integracion(f: Double => Double, inferior: Double, superior: Double): Double =
   val media:Double = (superior + inferior) / 2
-  (inferior - superior) * ((f(superior) + 4 * f(media) + f(inferior)) / 6)
+  (superior - inferior) * ((f(inferior) + 4 * f(media) + f(superior)) / 6)
 
 def error(esperado:Double, recibido:Double): Double =
   Math.abs(esperado-recibido)
